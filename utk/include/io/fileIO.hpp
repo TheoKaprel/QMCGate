@@ -113,7 +113,7 @@ public:
 		return m_writer->open(arg_filename.c_str());
 	}
 	
-	virtual bool writePointset(Pointset<D, T, P>& arg_pointset) { return m_writer->writePointset(arg_pointset); }
+	virtual bool writePointset(Pointset& arg_pointset) { return m_writer->writePointset(arg_pointset); }
 	
 	void close()
 	{
@@ -176,7 +176,7 @@ public:
 		return m_reader->open(arg_filename.c_str());
 	}
 	
-	virtual bool readPointset(Pointset<D, T, P>& arg_pointset) { return m_reader->readPointset(arg_pointset); }
+	virtual bool readPointset(Pointset& arg_pointset) { return m_reader->readPointset(arg_pointset); }
 	
 	void close()
 	{

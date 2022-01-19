@@ -40,23 +40,25 @@ void GamSPSVoxelsPosDistribution::SetSamplerType(std::string sampler_type) {
     std::string WhiteNoise_type = "WhiteNoise";
     std::string Halton_type = "Halton";
 
-    std::cout << "Coucou 1" << std::endl;
-
     if (sampler_type == WhiteNoise_type) {
-//        GamSamplerManager<SamplerWhitenoise> * samplerManager = new GamSamplerManager<SamplerWhitenoise>;
-//        GamSamplerManager<SamplerWhitenoise> samplerManager;
-        std::cout << "Coucou 2" << std::endl;
-        GamSamplerManager samplerManager;
+//        SamplerWhitenoise * sampler = new SamplerWhitenoise();
+
+        SamplerWhitenoise sWN;
+        sampler = &sWN;
+        std::cout << "ok for sampler type attrib white noise" << std::endl;
     }
     else if ( sampler_type == Halton_type) {
-//        GamSamplerManager<SamplerHalton> *samplerManager = new GamSamplerManager<SamplerHalton>;
-//        GamSamplerManager<SamplerHalton> samplerManager;
-        GamSamplerManager samplerManager;
+        SamplerHalton sH;
+        sampler = &sH;
+        std::cout << "ok for sampler type attrib Halton" << std::endl;
     }
 }
 
-void GamSPSVoxelsPosDistribution::AddPointsToSamplerSequence(long long int nb_pts) {
-//    sampler->generateSamples<D, T, P>(generated_pts, nb_pts);
+void GamSPSVoxelsPosDistribution::AddPointsToSamplerSequence(unsigned long long int nb_pts) {
+
+    std::cout << " OK 1 " << std::endl;
+
+    sampler->generateSamples(generated_pts, nb_pts);
 
 //
 //    scramblerCP->scramble<D, T, P>(generated_pts, generated_pts);

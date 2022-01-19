@@ -37,7 +37,7 @@ void GamVoxelsSource::InitializePosition(py::dict user_info) {
 
     fVoxelPositionGenerator->SetSamplerType(sampler_type);
 
-    long long int nb_initial_pts = (long long int) (DictFloat(user_info, "activity") * 1.e9);
+    unsigned long long int nb_initial_pts = (unsigned long long int) (DictFloat(user_info, "activity") * 1.e9);
 
     fVoxelPositionGenerator->AddPointsToSamplerSequence(nb_initial_pts);
 

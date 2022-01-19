@@ -44,13 +44,15 @@ namespace utk
  * \details This class is used as member of the utk::Pointset
  * class to represent the domain of definition of a point set.
 */
-template <typename T>
+//template <typename T>
 struct Domain
 {
 //public:
 	//Domain() {}
-	T pMin;
-	T pMax;
+//    typedef Point::T T;
+
+	Point pMin;
+	Point pMax;
 };
 
 }

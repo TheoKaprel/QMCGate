@@ -31,7 +31,8 @@
 #ifndef _UTK_SAMPLER_HALTON_
 #define _UTK_SAMPLER_HALTON_
 
-//#include "Sampler.hpp"
+#include "SamplerBase.hpp"
+#include "../pointsets/Point.hpp"
 #include "../pointsets/Pointset.hpp"
 #include "../utils.hpp"
 
@@ -40,8 +41,12 @@ namespace utk
 {
 static unsigned int primes[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
 
-class SamplerHalton {
+class SamplerHalton : public SamplerBase {
 public:
+
+    uint D = Point::D;
+    typedef Point::T T;
+
 
 	SamplerHalton() {
 		setBaseList(primes, 10);
@@ -53,8 +58,8 @@ public:
 		m_idBaseMax = arg_idBaseMax;
 	}
 
-    template<unsigned int D, typename T, typename P>
-	bool generateSamples(Pointset<D, T, P>& arg_pts, unsigned long long int arg_points)
+//    template<unsigned int D, typename T, typename P>
+	virtual bool generateSamples(Pointset& arg_pts, unsigned long long int arg_points) override
 	{
 		if(D > m_idBaseMax)
 		{

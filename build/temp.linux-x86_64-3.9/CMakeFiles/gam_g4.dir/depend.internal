@@ -19980,19 +19980,12 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSEneDistribution.cpp.o
  /export/home/tkaprelian/Software/miniconda3/include/python3.9/warnings.h
  /export/home/tkaprelian/Software/miniconda3/include/python3.9/weakrefobject.h
 CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSPosDistribution.cpp.o
- ../../utk/include/io/fileIO.hpp
- ../../utk/include/io/fileIO_bin.hpp
- ../../utk/include/io/fileIO_dat.hpp
- ../../utk/include/io/fileIO_ebin.hpp
- ../../utk/include/io/fileIO_edat.hpp
- ../../utk/include/io/fileIO_model.hpp
- ../../utk/include/io/fileIO_pts.hpp
- ../../utk/include/io/fileIO_tex.hpp
  ../../utk/include/io/messageStream.hpp
  ../../utk/include/pointsets/Domain.hpp
  ../../utk/include/pointsets/Point.hpp
  ../../utk/include/pointsets/Pointset.hpp
  ../../utk/include/pointsets/Vector.hpp
+ ../../utk/include/samplers/SamplerBase.hpp
  ../../utk/include/samplers/SamplerHalton.hpp
  ../../utk/include/samplers/SamplerWhitenoise.hpp
  ../../utk/include/scrambling/ScramblingCranleyPatterson.hpp
@@ -20114,7 +20107,6 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSPosDistribution.cpp.o
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSPosDistribution.cpp
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSPosDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
- /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSamplerManager.h
  /export/home/tkaprelian/Software/RTK/bin/Modules/Core/Common/ITKCommonExport.h
  /export/home/tkaprelian/Software/RTK/bin/Modules/Core/Common/compilers/ITK_COMPILER_INFO_GNU_CXX.h
  /export/home/tkaprelian/Software/RTK/bin/Modules/Core/Common/itkConfigure.h
@@ -20241,19 +20233,12 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.o
  ../../pybind11/include/pybind11/pybind11.h
  ../../pybind11/include/pybind11/pytypes.h
  ../../pybind11/include/pybind11/stl.h
- ../../utk/include/io/fileIO.hpp
- ../../utk/include/io/fileIO_bin.hpp
- ../../utk/include/io/fileIO_dat.hpp
- ../../utk/include/io/fileIO_ebin.hpp
- ../../utk/include/io/fileIO_edat.hpp
- ../../utk/include/io/fileIO_model.hpp
- ../../utk/include/io/fileIO_pts.hpp
- ../../utk/include/io/fileIO_tex.hpp
  ../../utk/include/io/messageStream.hpp
  ../../utk/include/pointsets/Domain.hpp
  ../../utk/include/pointsets/Point.hpp
  ../../utk/include/pointsets/Pointset.hpp
  ../../utk/include/pointsets/Vector.hpp
+ ../../utk/include/samplers/SamplerBase.hpp
  ../../utk/include/samplers/SamplerHalton.hpp
  ../../utk/include/samplers/SamplerWhitenoise.hpp
  ../../utk/include/scrambling/ScramblingCranleyPatterson.hpp
@@ -20534,7 +20519,6 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.o
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSPosDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
- /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSamplerManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSourceManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamVSource.h
  /export/home/tkaprelian/Software/RTK/bin/Modules/Core/Common/ITKCommonExport.h
@@ -24480,19 +24464,12 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamVoxelsSource.cpp.o
  ../../pybind11/include/pybind11/pybind11.h
  ../../pybind11/include/pybind11/pytypes.h
  ../../pybind11/include/pybind11/stl.h
- ../../utk/include/io/fileIO.hpp
- ../../utk/include/io/fileIO_bin.hpp
- ../../utk/include/io/fileIO_dat.hpp
- ../../utk/include/io/fileIO_ebin.hpp
- ../../utk/include/io/fileIO_edat.hpp
- ../../utk/include/io/fileIO_model.hpp
- ../../utk/include/io/fileIO_pts.hpp
- ../../utk/include/io/fileIO_tex.hpp
  ../../utk/include/io/messageStream.hpp
  ../../utk/include/pointsets/Domain.hpp
  ../../utk/include/pointsets/Point.hpp
  ../../utk/include/pointsets/Pointset.hpp
  ../../utk/include/pointsets/Vector.hpp
+ ../../utk/include/samplers/SamplerBase.hpp
  ../../utk/include/samplers/SamplerHalton.hpp
  ../../utk/include/samplers/SamplerWhitenoise.hpp
  ../../utk/include/scrambling/ScramblingCranleyPatterson.hpp
@@ -24785,7 +24762,6 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamVoxelsSource.cpp.o
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSEneDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSPosDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
- /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSamplerManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSingleParticleSource.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSourceManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamVSource.h
@@ -29356,19 +29332,12 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/pyGamSPSVoxelsPosDistribution.cpp.o
  ../../pybind11/include/pybind11/pybind11.h
  ../../pybind11/include/pybind11/pytypes.h
  ../../pybind11/include/pybind11/stl.h
- ../../utk/include/io/fileIO.hpp
- ../../utk/include/io/fileIO_bin.hpp
- ../../utk/include/io/fileIO_dat.hpp
- ../../utk/include/io/fileIO_ebin.hpp
- ../../utk/include/io/fileIO_edat.hpp
- ../../utk/include/io/fileIO_model.hpp
- ../../utk/include/io/fileIO_pts.hpp
- ../../utk/include/io/fileIO_tex.hpp
  ../../utk/include/io/messageStream.hpp
  ../../utk/include/pointsets/Domain.hpp
  ../../utk/include/pointsets/Point.hpp
  ../../utk/include/pointsets/Pointset.hpp
  ../../utk/include/pointsets/Vector.hpp
+ ../../utk/include/samplers/SamplerBase.hpp
  ../../utk/include/samplers/SamplerHalton.hpp
  ../../utk/include/samplers/SamplerWhitenoise.hpp
  ../../utk/include/scrambling/ScramblingCranleyPatterson.hpp
@@ -29489,7 +29458,6 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/pyGamSPSVoxelsPosDistribution.cpp.o
  /export/home/tkaprelian/Software/GatePython/Geant/src/source/particles/management/include/pwdefs.hh
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSPosDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
- /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSamplerManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/pyGamSPSVoxelsPosDistribution.cpp
  /export/home/tkaprelian/Software/RTK/bin/Modules/Core/Common/ITKCommonExport.h
  /export/home/tkaprelian/Software/RTK/bin/Modules/Core/Common/compilers/ITK_COMPILER_INFO_GNU_CXX.h
@@ -31939,19 +31907,12 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/pyGamVoxelsSource.cpp.o
  ../../pybind11/include/pybind11/pybind11.h
  ../../pybind11/include/pybind11/pytypes.h
  ../../pybind11/include/pybind11/stl.h
- ../../utk/include/io/fileIO.hpp
- ../../utk/include/io/fileIO_bin.hpp
- ../../utk/include/io/fileIO_dat.hpp
- ../../utk/include/io/fileIO_ebin.hpp
- ../../utk/include/io/fileIO_edat.hpp
- ../../utk/include/io/fileIO_model.hpp
- ../../utk/include/io/fileIO_pts.hpp
- ../../utk/include/io/fileIO_tex.hpp
  ../../utk/include/io/messageStream.hpp
  ../../utk/include/pointsets/Domain.hpp
  ../../utk/include/pointsets/Point.hpp
  ../../utk/include/pointsets/Pointset.hpp
  ../../utk/include/pointsets/Vector.hpp
+ ../../utk/include/samplers/SamplerBase.hpp
  ../../utk/include/samplers/SamplerHalton.hpp
  ../../utk/include/samplers/SamplerWhitenoise.hpp
  ../../utk/include/scrambling/ScramblingCranleyPatterson.hpp
@@ -32189,7 +32150,6 @@ CMakeFiles/gam_g4.dir/gam_g4/gam_lib/pyGamVoxelsSource.cpp.o
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSEneDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSPosDistribution.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
- /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSamplerManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSingleParticleSource.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamSourceManager.h
  /export/home/tkaprelian/Software/GatePython/gam-g4/gam_g4/gam_lib/GamVSource.h

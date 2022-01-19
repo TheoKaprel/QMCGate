@@ -34,6 +34,8 @@
 
 #include "Point.hpp"
 #include "Domain.hpp"
+#include "Vector.hpp"
+
 #include "../io/messageStream.hpp"
 
 #include <vector>
@@ -51,11 +53,13 @@ namespace utk
  * a point set. It is at the core of the UTK framework and is voluntarily kept
  * as simple as possible and heavily templated for the sake of code modularity.
 */
-template <unsigned int D, typename T, typename P>
-class Pointset : public std::vector< P >
+//template <unsigned int D, typename T, typename P>
+class Pointset : public std::vector< Point >
 {
 public:
-	Pointset() 
+    uint D = Point::D;
+
+	Pointset()
 	{
 		for(uint d=0; d<D; d++)
 		{
@@ -65,7 +69,7 @@ public:
 		toricity=-1;
 	}
 
-	double normalizePositions( Pointset<D, double, Point<D, double> >& pts2 ) const
+	double normalizePositions( Pointset& pts2 ) const
 	{
 		if(domain.pMin.pos() > domain.pMax.pos())
 		{
@@ -109,7 +113,7 @@ public:
 		toricity=1;
 	}
 
-	Domain<P> domain;
+	Domain domain;
 	int toricity;
 	
 protected:

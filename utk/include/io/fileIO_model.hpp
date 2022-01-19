@@ -53,7 +53,7 @@ public:
 		return m_istream.is_open();
 	}
 	
-	virtual bool readPointset(Pointset<D, T, P>& arg_pointset) { return false; }
+	virtual bool readPointset(Pointset& arg_pointset) { return false; }
 	
 	virtual void close()
 	{
@@ -79,7 +79,7 @@ public:
 		return m_ostream.is_open();
 	}
 	
-	virtual bool writePointset(const Pointset<D, T, P>& arg_pointset) { return false; }
+	virtual bool writePointset(const Pointset& arg_pointset) { return false; }
 	
 	virtual void close()
 	{

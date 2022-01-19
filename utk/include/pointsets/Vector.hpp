@@ -50,8 +50,10 @@ class Vector
 {
 private:
 	
-public:	
-	
+public:
+//    static int const D = 3;
+//    typedef double T;
+
 	T data[D];
 	
 	

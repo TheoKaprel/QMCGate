@@ -31,7 +31,8 @@
 #define _UTK_SAMPLER_WHITENOISE_
 
 
-//#include "Sampler.hpp"
+#include "SamplerBase.hpp"
+#include "../pointsets/Point.hpp"
 #include "../pointsets/Pointset.hpp"
 #include "../utils.hpp"
 
@@ -44,31 +45,26 @@
 namespace utk
 {
 
-class SamplerWhitenoise {
+class SamplerWhitenoise : public SamplerBase {
 protected:
 public:
+
+    uint D = Point::D;
 
 	SamplerWhitenoise() { setRandomSeedTime(); }
 
 	void setRandomSeed( long unsigned int arg_seed ) { m_mersenneTwister.seed(arg_seed); }
 	void setRandomSeedTime() { m_mersenneTwister.seed(std::chrono::system_clock::now().time_since_epoch().count()); }
 
-	template<unsigned int D, typename T, typename P>
-    bool generateSamples(Pointset<D, T, P>& arg_pts, unsigned long long int arg_points)
+//	template<unsigned int D, typename T, typename P>
+    virtual bool generateSamples(Pointset& arg_pts, unsigned long long int arg_points) override
 	{
-//		if (!arg_pts.empty())
-//		{
-//			WARNING("SamplerWhitenoise::generateSamples the pointset to fill is not empty, clearing it ...");
-//			arg_pts.clear();
-//		}
 
-		if (!isFloatingType<T>())
-		{
-			ERROR("SamplerWhitenoise::generateSamples generates samples in [0, 1]^d, can only run with points of type float or double");
-			return false;
-		}
+        std::cout << "GOOD PLACE TO GENERATE SAMPLES " << std::endl;
+
         int nb_generated_pts = arg_pts.size();
 
+        std::cout << "1 " << std::endl;
 		//load domain & toricity
 		for(uint d=0; d<D; d++)
 		{
@@ -77,12 +73,12 @@ public:
 		}
 		arg_pts.toricity = 1;
 
+        std::cout << "2 " << std::endl;
 		arg_pts.resize(nb_generated_pts + arg_points);
 		for(uint i=0; i<arg_points; i++)
 			for(uint d=0; d<D; d++)
 				arg_pts[nb_generated_pts + i].pos()[d] = getRandom01();
-
-        std::cout << "TORICITY WN : " << arg_pts.toricity << std::endl;
+        std::cout << "3 " << std::endl;
 		return true;
 	};
 

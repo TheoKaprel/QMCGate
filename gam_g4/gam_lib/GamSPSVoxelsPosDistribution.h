@@ -15,24 +15,18 @@
 #include "itkImage.h"
 #include <fstream>
 
-//#include <samplers/Sampler.hpp>
+
+#include <pointsets/Pointset.hpp>
+#include <samplers/SamplerBase.hpp>
 #include <samplers/SamplerWhitenoise.hpp>
 #include <samplers/SamplerHalton.hpp>
 #include <scrambling/ScramblingCranleyPatterson.hpp>
-#include <io/fileIO.hpp>
+//#include <io/fileIO.hpp>
 
-#include "GamSamplerManager.h"
 
 
 
 using namespace utk;
-
-
-typedef double T;
-const unsigned int D = 3;
-typedef Point< D, T> P;
-
-
 
 class GamSPSVoxelsPosDistribution : public GamSPSPosDistribution {
 
@@ -54,13 +48,14 @@ public:
 
     void SetCumulativeDistributionFunction(VD vz, VD2 vy, VD3 vx);
 
-//    GamSamplerManager * samplerManager;
 
-    Pointset< D, T, P> generated_pts;
+    SamplerBase * sampler;
+
+    Pointset generated_pts;
 
     void SetSamplerType(std::string sampler_type);
 
-    void AddPointsToSamplerSequence(long long int nb_pts);
+    void AddPointsToSamplerSequence(unsigned long long int nb_pts);
 
     std::string points01_filename;
 
