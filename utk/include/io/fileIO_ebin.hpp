@@ -51,7 +51,7 @@ public:
 		return this->m_istream.is_open();
 	}
 	
-	virtual bool readPointset(Pointset<D, T, P>& arg_pointset) 
+	virtual bool readPointset(Pointset& arg_pointset)
 	{
 		if(!arg_pointset.empty())
 		{
@@ -90,7 +90,7 @@ public:
 		return this->m_ostream.is_open();
 	}
 	
-	virtual bool writePointset(const Pointset<D, T, P>& arg_pointset) 
+	virtual bool writePointset(const Pointset& arg_pointset)
 	{
 		this->m_ostream.write((char*)&(arg_pointset.domain.pMin), sizeof(arg_pointset.domain.pMin));
 		this->m_ostream.write((char*)&(arg_pointset.domain.pMax), sizeof(arg_pointset.domain.pMax));

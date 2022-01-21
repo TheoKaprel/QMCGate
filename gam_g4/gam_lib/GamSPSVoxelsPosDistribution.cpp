@@ -12,7 +12,7 @@
 
 
 
-GamSPSVoxelsPosDistribution::GamSPSVoxelsPosDistribution() {
+GamSPSVoxelsPosDistribution::GamSPSVoxelsPosDistribution() : sampler(0) {
     // Create the image pointer
     // The size and allocation will be performed on the py side
     cpp_image = ImageType::New();
@@ -21,12 +21,19 @@ GamSPSVoxelsPosDistribution::GamSPSVoxelsPosDistribution() {
     fGlobalTranslation = G4ThreeVector();
     fGlobalRotation = G4RotationMatrix();
 
-    points01_filename = "/export/home/tkaprelian/Desktop/Sampling/code/output/points01/points01.edat";
+    points01_filename = "/export/home/tkaprelian/Desktop/Sampling/code/output/points01/points01_position.edat";
     pos_filename = "/export/home/tkaprelian/Desktop/Sampling/code/output/samples/sampled_position_indexes.edat";
 
     assert(!m_ostream_pos_indexes.is_open());
     m_ostream_pos_indexes.open(pos_filename);
 
+
+    unsigned int iter = 0;
+}
+
+GamSPSVoxelsPosDistribution::~GamSPSVoxelsPosDistribution()  {
+    m_ostream_pos_indexes.close();
+    delete sampler;
 }
 
 void GamSPSVoxelsPosDistribution::SetCumulativeDistributionFunction(VD vz, VD2 vy, VD3 vx) {
@@ -41,40 +48,41 @@ void GamSPSVoxelsPosDistribution::SetSamplerType(std::string sampler_type) {
     std::string Halton_type = "Halton";
 
     if (sampler_type == WhiteNoise_type) {
-//        SamplerWhitenoise * sampler = new SamplerWhitenoise();
-
-        SamplerWhitenoise sWN;
-        sampler = &sWN;
-        std::cout << "ok for sampler type attrib white noise" << std::endl;
+        sampler = new SamplerWhitenoise;
     }
     else if ( sampler_type == Halton_type) {
-        SamplerHalton sH;
-        sampler = &sH;
-        std::cout << "ok for sampler type attrib Halton" << std::endl;
+        sampler = new SamplerHalton;
     }
+    scramblerCP = new ScramblingCranleyPatterson;
 }
 
 void GamSPSVoxelsPosDistribution::AddPointsToSamplerSequence(unsigned long long int nb_pts) {
-
-    std::cout << " OK 1 " << std::endl;
-
     sampler->generateSamples(generated_pts, nb_pts);
 
-//
-//    scramblerCP->scramble<D, T, P>(generated_pts, generated_pts);
+    Pointset scrambled_pts;
 
-//    PointsetWriter<D, T,P> writer;
-//    writer.open(points01_filename);
-//    writer.writePointset(generated_pts);
-//    writer.close();
+    scramblerCP->scramble(generated_pts, scrambled_pts);
+
+    generated_pts = scrambled_pts;
+
+    PointsetWriter<Point::D, Point::T,Point> writer;
+    writer.open(points01_filename);
+    writer.writePointset(generated_pts);
+    writer.close();
 }
 
 
 G4ThreeVector GamSPSVoxelsPosDistribution::VGenerateOne() {
 
-    double p1 = G4UniformRand();
-    double p2 = G4UniformRand();
-    double p3 = G4UniformRand();
+    if (iter >= generated_pts.size()) {
+        AddPointsToSamplerSequence(generated_pts.size());
+    }
+
+    double p1 = generated_pts[iter+2].pos()[0];
+    double p2 = generated_pts[iter+2].pos()[1];
+    double p3 = generated_pts[iter+2].pos()[2];
+    iter++;
+
 
     // Get Cumulative Distribution Function for Z
     int i = 0;

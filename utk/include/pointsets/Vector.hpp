@@ -51,13 +51,13 @@ class Vector
 private:
 	
 public:
-//    static int const D = 3;
-//    typedef double T;
-
 	T data[D];
 	
-	
-	Vector(T f = 0) { for(uint i=0; i<D; i++) data[i] = f; }
+	Vector(T f = 0) {
+        for(uint i=0; i<D; i++) {
+            data[i] = f;
+        }
+    }
 	Vector(const T val[D]) { for(uint i=0; i<D; i++) data[i] = val[i]; }
 	Vector(T i, T j, T k=0, T l=0) { data[0] = i; data[1] = j; if (D > 2) data[2] = k; if (D > 3) data[3] = l; for(uint i=4; i<D; i++) data[i] = 0; }
 	Vector(const Vector<D, T>& arg_v) { memcpy(data, arg_v.data, D*sizeof(T)); }

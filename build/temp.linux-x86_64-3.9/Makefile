@@ -3210,33 +3210,6 @@ gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.s:
 	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.s
 .PHONY : gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.s
 
-gam_g4/gam_lib/GamSamplerManager.o: gam_g4/gam_lib/GamSamplerManager.cpp.o
-
-.PHONY : gam_g4/gam_lib/GamSamplerManager.o
-
-# target to build an object file
-gam_g4/gam_lib/GamSamplerManager.cpp.o:
-	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSamplerManager.cpp.o
-.PHONY : gam_g4/gam_lib/GamSamplerManager.cpp.o
-
-gam_g4/gam_lib/GamSamplerManager.i: gam_g4/gam_lib/GamSamplerManager.cpp.i
-
-.PHONY : gam_g4/gam_lib/GamSamplerManager.i
-
-# target to preprocess a source file
-gam_g4/gam_lib/GamSamplerManager.cpp.i:
-	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSamplerManager.cpp.i
-.PHONY : gam_g4/gam_lib/GamSamplerManager.cpp.i
-
-gam_g4/gam_lib/GamSamplerManager.s: gam_g4/gam_lib/GamSamplerManager.cpp.s
-
-.PHONY : gam_g4/gam_lib/GamSamplerManager.s
-
-# target to generate assembly for a file
-gam_g4/gam_lib/GamSamplerManager.cpp.s:
-	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSamplerManager.cpp.s
-.PHONY : gam_g4/gam_lib/GamSamplerManager.cpp.s
-
 gam_g4/gam_lib/GamSimulationStatisticsActor.o: gam_g4/gam_lib/GamSimulationStatisticsActor.cpp.o
 
 .PHONY : gam_g4/gam_lib/GamSimulationStatisticsActor.o
@@ -4464,9 +4437,6 @@ help:
 	@echo "... gam_g4/gam_lib/GamSPSVoxelsPosDistribution.o"
 	@echo "... gam_g4/gam_lib/GamSPSVoxelsPosDistribution.i"
 	@echo "... gam_g4/gam_lib/GamSPSVoxelsPosDistribution.s"
-	@echo "... gam_g4/gam_lib/GamSamplerManager.o"
-	@echo "... gam_g4/gam_lib/GamSamplerManager.i"
-	@echo "... gam_g4/gam_lib/GamSamplerManager.s"
 	@echo "... gam_g4/gam_lib/GamSimulationStatisticsActor.o"
 	@echo "... gam_g4/gam_lib/GamSimulationStatisticsActor.i"
 	@echo "... gam_g4/gam_lib/GamSimulationStatisticsActor.s"

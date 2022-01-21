@@ -10,16 +10,9 @@ namespace utk
     class SamplerBase {
     protected:
     public:
+        uint D = 0;
 
-//        uint D = Point::D;
-
-        SamplerBase() {};
-
-        virtual bool generateSamples(Pointset& arg_pts, unsigned long long int arg_points)
-        {
-            std::cout << "WRONG PLACE TO GENERATE SAMPLES " << std::endl;
-            return true;
-        };
+        virtual bool generateSamples(Pointset& arg_pts, unsigned long long int arg_points) = 0;
 
     protected:
     };

@@ -45,7 +45,7 @@ public:
 	PointsetReader_TIKZ() {}
 	virtual ~PointsetReader_TIKZ() {}
 	
-	virtual bool readPointset(Pointset<D, T, P>& arg_pointset) 
+	virtual bool readPointset(Pointset& arg_pointset)
 	{	
 		ERROR("Cannot read tikz pointset");
 		return false;
@@ -59,7 +59,7 @@ public:
 	PointsetWriter_TIKZ() { first=true; }
 	virtual ~PointsetWriter_TIKZ() {}
 	
-	virtual bool writePointset(const Pointset<D, T, P>& arg_pointset) 
+	virtual bool writePointset(const Pointset& arg_pointset)
 	{
 		for(uint i=0; i<arg_pointset.size(); i++)
 		{

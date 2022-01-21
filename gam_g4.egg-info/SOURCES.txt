@@ -339,8 +339,6 @@ gam_g4/gam_lib/GamSPSPosDistribution.cpp
 gam_g4/gam_lib/GamSPSPosDistribution.h
 gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp
 gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
-gam_g4/gam_lib/GamSamplerManager.cpp
-gam_g4/gam_lib/GamSamplerManager.h
 gam_g4/gam_lib/GamSignalHandler.h
 gam_g4/gam_lib/GamSimulationStatisticsActor.cpp
 gam_g4/gam_lib/GamSimulationStatisticsActor.h
@@ -43630,6 +43628,7 @@ utk/include/samplers/SamplerBNLDS.hpp
 utk/include/samplers/SamplerBNLDS_optimizer.hpp
 utk/include/samplers/SamplerBNLDS_optimizer_GPU.hpp
 utk/include/samplers/SamplerBNOTSpp.hpp
+utk/include/samplers/SamplerBase.hpp
 utk/include/samplers/SamplerCMJ.hpp
 utk/include/samplers/SamplerCapCVT.hpp
 utk/include/samplers/SamplerDartThrowing.hpp

@@ -98,7 +98,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSEneDistribution.cpp.o"
   "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSPosDistribution.cpp.o"
   "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.o"
-  "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSamplerManager.cpp.o"
   "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSimulationStatisticsActor.cpp.o"
   "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSingleParticleSource.cpp.o"
   "CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSourceManager.cpp.o"

@@ -15,13 +15,13 @@
 #include "itkImage.h"
 #include <fstream>
 
-
+#include <pointsets/Point.hpp>
 #include <pointsets/Pointset.hpp>
 #include <samplers/SamplerBase.hpp>
 #include <samplers/SamplerWhitenoise.hpp>
 #include <samplers/SamplerHalton.hpp>
 #include <scrambling/ScramblingCranleyPatterson.hpp>
-//#include <io/fileIO.hpp>
+#include <io/fileIO.hpp>
 
 
 
@@ -34,9 +34,7 @@ public:
 
     GamSPSVoxelsPosDistribution();
 
-    virtual ~GamSPSVoxelsPosDistribution() {
-        m_ostream_pos_indexes.close();
-    }
+    virtual ~GamSPSVoxelsPosDistribution();
 
     // Cannot inherit from GenerateOne
     virtual G4ThreeVector VGenerateOne();
@@ -50,6 +48,8 @@ public:
 
 
     SamplerBase * sampler;
+
+    ScramblingCranleyPatterson * scramblerCP;
 
     Pointset generated_pts;
 
@@ -73,12 +73,16 @@ public:
     G4ThreeVector fGlobalTranslation;
     G4RotationMatrix fGlobalRotation;
 
-    
+    unsigned int iter;
 
 protected:
+
+
     VD3 fCDFX;
     VD2 fCDFY;
     VD fCDFZ;
+
+
 };
 
 #endif // GamSPSVoxelsPosDistribution_h

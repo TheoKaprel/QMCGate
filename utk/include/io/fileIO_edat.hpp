@@ -45,7 +45,7 @@ public:
 	PointsetReader_EDAT() {}
 	virtual ~PointsetReader_EDAT() {}
 	
-	virtual bool readPointset(Pointset<D, T, P>& arg_pointset) 
+	virtual bool readPointset(Pointset& arg_pointset)
 	{
 		
 		if(this->m_istream.eof())
@@ -112,7 +112,7 @@ public:
 	PointsetWriter_EDAT() { first=true; }
 	virtual ~PointsetWriter_EDAT() {}
 	
-	virtual bool writePointset(const Pointset<D, T, P>& arg_pointset) 
+	virtual bool writePointset(const Pointset& arg_pointset)
 	{
 		if(!first)
 			this->m_ostream << "#" << std::endl;

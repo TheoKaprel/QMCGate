@@ -49,22 +49,22 @@ class SamplerWhitenoise : public SamplerBase {
 protected:
 public:
 
-    uint D = Point::D;
+    uint D;
 
-	SamplerWhitenoise() { setRandomSeedTime(); }
+	SamplerWhitenoise() {
+        setRandomSeedTime();
+        D = Point::D;
+    }
 
 	void setRandomSeed( long unsigned int arg_seed ) { m_mersenneTwister.seed(arg_seed); }
 	void setRandomSeedTime() { m_mersenneTwister.seed(std::chrono::system_clock::now().time_since_epoch().count()); }
 
-//	template<unsigned int D, typename T, typename P>
+
     virtual bool generateSamples(Pointset& arg_pts, unsigned long long int arg_points) override
 	{
 
-        std::cout << "GOOD PLACE TO GENERATE SAMPLES " << std::endl;
-
         int nb_generated_pts = arg_pts.size();
 
-        std::cout << "1 " << std::endl;
 		//load domain & toricity
 		for(uint d=0; d<D; d++)
 		{
@@ -73,12 +73,11 @@ public:
 		}
 		arg_pts.toricity = 1;
 
-        std::cout << "2 " << std::endl;
 		arg_pts.resize(nb_generated_pts + arg_points);
 		for(uint i=0; i<arg_points; i++)
 			for(uint d=0; d<D; d++)
 				arg_pts[nb_generated_pts + i].pos()[d] = getRandom01();
-        std::cout << "3 " << std::endl;
+
 		return true;
 	};
 

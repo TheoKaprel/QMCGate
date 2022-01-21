@@ -44,12 +44,12 @@ static unsigned int primes[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
 class SamplerHalton : public SamplerBase {
 public:
 
-    uint D = Point::D;
-    typedef Point::T T;
+    uint D;
 
 
 	SamplerHalton() {
 		setBaseList(primes, 10);
+        D = Point::D;
 	}
 
 	void setBaseList( unsigned int* arg_base_list, unsigned int arg_idBaseMax )
@@ -61,6 +61,7 @@ public:
 //    template<unsigned int D, typename T, typename P>
 	virtual bool generateSamples(Pointset& arg_pts, unsigned long long int arg_points) override
 	{
+        typedef double T;
 		if(D > m_idBaseMax)
 		{
 			ERROR("SamplerHalton::generateSamples the wanted number of dimensions is higher than the number of basis available");
@@ -68,11 +69,6 @@ public:
 		}
 
         int nb_generated_pts = arg_pts.size();
-//		if (!arg_pts.empty())
-//		{
-//			WARNING("SamplerHalton::generateSamples the pointset to fill is not empty, clearing it ...");
-//			arg_pts.clear();
-//		}
 
 		arg_pts.resize( nb_generated_pts + arg_points);
 

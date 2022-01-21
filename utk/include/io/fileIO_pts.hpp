@@ -45,7 +45,7 @@ public:
 	PointsetReader_PTS() {}
 	virtual ~PointsetReader_PTS() {}
 	
-	virtual bool readPointset(Pointset<D, T, P>& arg_pointset) 
+	virtual bool readPointset(Pointset& arg_pointset)
 	{
 		if(!arg_pointset.empty())
 		{
@@ -88,7 +88,7 @@ public:
 	PointsetWriter_PTS() { first=true; }
 	virtual ~PointsetWriter_PTS() {}
 	
-	virtual bool writePointset(const Pointset<D, T, P>& arg_pointset) 
+	virtual bool writePointset(const Pointset& arg_pointset)
 	{
 		if(!first)
 			this->m_ostream << "#patch-separator" << std::endl;
