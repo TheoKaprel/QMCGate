@@ -15,6 +15,9 @@
 #include "GamSPSEneDistribution.h"
 #include "G4ParticleDefinition.hh"
 
+#include "G4SPSRandomGenerator.hh"
+#include "GamSPSAngDistribution.h"
+
 /*
     Single Particle Source generator.
     We need to re-implement the one from G4 in order to
@@ -31,11 +34,13 @@ public:
 
     G4SPSPosDistribution *GetPosDist() { return fPositionGenerator; }
 
-    G4SPSAngDistribution *GetAngDist() { return fDirectionGenerator; }
+    GamSPSAngDistribution *GetAngDist() { return fDirectionGenerator; }
 
     GamSPSEneDistribution *GetEneDist() { return fEnergyGenerator; }
 
     void SetPosGenerator(GamSPSPosDistribution *pg);
+
+    void SetAngGenerator(GamSPSAngDistribution *ag);
 
     void SetParticleDefinition(G4ParticleDefinition *def);
 
@@ -46,7 +51,7 @@ protected:
     double fCharge;
     double fMass;
     GamSPSPosDistribution *fPositionGenerator;
-    G4SPSAngDistribution *fDirectionGenerator;
+    GamSPSAngDistribution *fDirectionGenerator;
     GamSPSEneDistribution *fEnergyGenerator;
     G4SPSRandomGenerator *fBiasRndm;
 };

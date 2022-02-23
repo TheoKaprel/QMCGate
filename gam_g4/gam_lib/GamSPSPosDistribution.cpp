@@ -5,7 +5,7 @@
    See LICENSE.md for further details
    -------------------------------------------------- */
 
-#include "GamSPSVoxelsPosDistribution.h"
+#include "GamSPSPosDistribution.h"
 
 G4ThreeVector GamSPSPosDistribution::VGenerateOne() {
     return GenerateOne();

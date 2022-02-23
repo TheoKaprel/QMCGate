@@ -61,7 +61,7 @@ public:
 		if(pts_input.toricity!=1)
 			WARNING("ScramblingCranleyPatterson:compute applying on a non-toric point set");
 
-		Vector<3, double> randvector;
+		Vector<Point::D, double> randvector;
 		for(uint d=0; d<D; d++) {
             randvector[d] = getRandom01()*(pts_input.domain.pMax.pos()[d]-pts_input.domain.pMin.pos()[d]);
         }

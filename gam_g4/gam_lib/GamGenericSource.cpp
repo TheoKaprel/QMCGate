@@ -245,6 +245,7 @@ void GamGenericSource::InitializeDirection(py::dict puser_info) {
      * New ones: iso, focus, direction
      * (Later: beam, user defined)
      */
+
     auto user_info = py::dict(puser_info["direction"]);
     auto ang = fSPS->GetAngDist();
     auto ang_type = DictStr(user_info, "type");

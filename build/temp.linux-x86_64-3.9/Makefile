@@ -3129,6 +3129,33 @@ gam_g4/gam_lib/GamRunAction.cpp.s:
 	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamRunAction.cpp.s
 .PHONY : gam_g4/gam_lib/GamRunAction.cpp.s
 
+gam_g4/gam_lib/GamSPSAngDistribution.o: gam_g4/gam_lib/GamSPSAngDistribution.cpp.o
+
+.PHONY : gam_g4/gam_lib/GamSPSAngDistribution.o
+
+# target to build an object file
+gam_g4/gam_lib/GamSPSAngDistribution.cpp.o:
+	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSAngDistribution.cpp.o
+.PHONY : gam_g4/gam_lib/GamSPSAngDistribution.cpp.o
+
+gam_g4/gam_lib/GamSPSAngDistribution.i: gam_g4/gam_lib/GamSPSAngDistribution.cpp.i
+
+.PHONY : gam_g4/gam_lib/GamSPSAngDistribution.i
+
+# target to preprocess a source file
+gam_g4/gam_lib/GamSPSAngDistribution.cpp.i:
+	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSAngDistribution.cpp.i
+.PHONY : gam_g4/gam_lib/GamSPSAngDistribution.cpp.i
+
+gam_g4/gam_lib/GamSPSAngDistribution.s: gam_g4/gam_lib/GamSPSAngDistribution.cpp.s
+
+.PHONY : gam_g4/gam_lib/GamSPSAngDistribution.s
+
+# target to generate assembly for a file
+gam_g4/gam_lib/GamSPSAngDistribution.cpp.s:
+	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSAngDistribution.cpp.s
+.PHONY : gam_g4/gam_lib/GamSPSAngDistribution.cpp.s
+
 gam_g4/gam_lib/GamSPSEneDistribution.o: gam_g4/gam_lib/GamSPSEneDistribution.cpp.o
 
 .PHONY : gam_g4/gam_lib/GamSPSEneDistribution.o
@@ -3182,6 +3209,33 @@ gam_g4/gam_lib/GamSPSPosDistribution.s: gam_g4/gam_lib/GamSPSPosDistribution.cpp
 gam_g4/gam_lib/GamSPSPosDistribution.cpp.s:
 	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSPosDistribution.cpp.s
 .PHONY : gam_g4/gam_lib/GamSPSPosDistribution.cpp.s
+
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.o: gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.o
+
+.PHONY : gam_g4/gam_lib/GamSPSVoxelsAngDistribution.o
+
+# target to build an object file
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.o:
+	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.o
+.PHONY : gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.o
+
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.i: gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.i
+
+.PHONY : gam_g4/gam_lib/GamSPSVoxelsAngDistribution.i
+
+# target to preprocess a source file
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.i:
+	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.i
+.PHONY : gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.i
+
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.s: gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.s
+
+.PHONY : gam_g4/gam_lib/GamSPSVoxelsAngDistribution.s
+
+# target to generate assembly for a file
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.s:
+	$(MAKE) -f CMakeFiles/gam_g4.dir/build.make CMakeFiles/gam_g4.dir/gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.s
+.PHONY : gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp.s
 
 gam_g4/gam_lib/GamSPSVoxelsPosDistribution.o: gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp.o
 
@@ -4428,12 +4482,18 @@ help:
 	@echo "... gam_g4/gam_lib/GamRunAction.o"
 	@echo "... gam_g4/gam_lib/GamRunAction.i"
 	@echo "... gam_g4/gam_lib/GamRunAction.s"
+	@echo "... gam_g4/gam_lib/GamSPSAngDistribution.o"
+	@echo "... gam_g4/gam_lib/GamSPSAngDistribution.i"
+	@echo "... gam_g4/gam_lib/GamSPSAngDistribution.s"
 	@echo "... gam_g4/gam_lib/GamSPSEneDistribution.o"
 	@echo "... gam_g4/gam_lib/GamSPSEneDistribution.i"
 	@echo "... gam_g4/gam_lib/GamSPSEneDistribution.s"
 	@echo "... gam_g4/gam_lib/GamSPSPosDistribution.o"
 	@echo "... gam_g4/gam_lib/GamSPSPosDistribution.i"
 	@echo "... gam_g4/gam_lib/GamSPSPosDistribution.s"
+	@echo "... gam_g4/gam_lib/GamSPSVoxelsAngDistribution.o"
+	@echo "... gam_g4/gam_lib/GamSPSVoxelsAngDistribution.i"
+	@echo "... gam_g4/gam_lib/GamSPSVoxelsAngDistribution.s"
 	@echo "... gam_g4/gam_lib/GamSPSVoxelsPosDistribution.o"
 	@echo "... gam_g4/gam_lib/GamSPSVoxelsPosDistribution.i"
 	@echo "... gam_g4/gam_lib/GamSPSVoxelsPosDistribution.s"

@@ -370,6 +370,9 @@ FMT_WERROR:BOOL=OFF
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
 
+// Directory for Geant4
+Geant4_DIR:PATH=/export/home/tkaprelian/Software/GatePython/Geant/bin
+
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 

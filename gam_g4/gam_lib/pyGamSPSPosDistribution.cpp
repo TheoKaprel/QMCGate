@@ -14,8 +14,7 @@ namespace py = pybind11;
 #include "G4SPSPosDistribution.hh"
 
 void init_GamSPSPosDistribution(py::module &m) {
-
     py::class_<GamSPSPosDistribution, G4SPSPosDistribution>(m, "GamSPSPosDistribution")
-        .def(py::init());
+            .def(py::init());
 }
 

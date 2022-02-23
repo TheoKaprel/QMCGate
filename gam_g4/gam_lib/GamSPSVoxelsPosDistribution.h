@@ -23,9 +23,6 @@
 #include <scrambling/ScramblingCranleyPatterson.hpp>
 #include <io/fileIO.hpp>
 
-
-
-
 using namespace utk;
 
 class GamSPSVoxelsPosDistribution : public GamSPSPosDistribution {
@@ -55,12 +52,15 @@ public:
 
     void SetSamplerType(std::string sampler_type);
 
+    void SetFileName(std::string filename_base);
+
     void AddPointsToSamplerSequence(unsigned long long int nb_pts);
 
-    std::string points01_filename;
+//    std::string points01_filename;
+//    std::string suffixe;
 
-    std::string pos_filename;
-    std::ofstream m_ostream_pos_indexes;
+//    std::string pos_filename;
+//    std::ofstream m_ostream_pos_indexes;
 
     // Image type is 3D float by default (the pixel data are not used
     // nor even allocated. Only useful to convert pixel coordinates
@@ -73,7 +73,7 @@ public:
     G4ThreeVector fGlobalTranslation;
     G4RotationMatrix fGlobalRotation;
 
-    unsigned int iter;
+    int iter;
 
 protected:
 
@@ -82,6 +82,7 @@ protected:
     VD2 fCDFY;
     VD fCDFZ;
 
+    int * getScientificNot(unsigned long long int N);
 
 };
 

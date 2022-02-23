@@ -14,7 +14,7 @@ class GamSPSEneDistribution : public G4SPSEneDistribution {
 
 public:
 
-    virtual ~GamSPSEneDistribution() {}
+    virtual ~GamSPSEneDistribution() {};
 
     void GenerateFluor18();
 

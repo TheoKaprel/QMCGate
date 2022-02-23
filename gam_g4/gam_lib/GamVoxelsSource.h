@@ -13,6 +13,8 @@
 #include "GamSingleParticleSource.h"
 #include "GamSPSVoxelsPosDistribution.h"
 
+#include "GamSPSVoxelsAngDistribution.h"
+
 namespace py = pybind11;
 
 class GamVoxelsSource : public GamGenericSource {
@@ -30,8 +32,11 @@ public:
 
 protected:
     void InitializePosition(py::dict user_info);
+    void InitializeDirection(py::dict user_info);
 
     GamSPSVoxelsPosDistribution * fVoxelPositionGenerator;
+    GamSPSVoxelsAngDistribution * fVoxelDirectionGenerator;
+
 
 };
 

@@ -156,6 +156,8 @@ void init_G4SPSAngDistribution(py::module &);
 
 void init_G4SPSRandomGenerator(py::module &);
 
+//void init_GamSPSRandomGenerator(py::module &);
+
 void init_G4SPSEneDistribution(py::module &);
 
 void init_G4SingleParticleSource(py::module &);
@@ -347,6 +349,7 @@ PYBIND11_MODULE(gam_g4, m) {
     init_GamGenericSource(m);
     init_GamVoxelsSource(m);
     init_GamSPSPosDistribution(m);
+//    init_GamSPSRandomGenerator(m);
     init_GamSPSVoxelsPosDistribution(m);
     init_GamRunAction(m);
     init_GamEventAction(m);

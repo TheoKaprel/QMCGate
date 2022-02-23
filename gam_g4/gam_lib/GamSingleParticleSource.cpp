@@ -12,7 +12,7 @@
 
 GamSingleParticleSource::GamSingleParticleSource() {
     fPositionGenerator = new GamSPSPosDistribution();
-    fDirectionGenerator = new G4SPSAngDistribution();
+    fDirectionGenerator = new GamSPSAngDistribution();
     fEnergyGenerator = new GamSPSEneDistribution();
 
     // needed
@@ -36,6 +36,14 @@ void GamSingleParticleSource::SetPosGenerator(GamSPSPosDistribution *pg) {
 }
 
 
+void GamSingleParticleSource::SetAngGenerator(GamSPSAngDistribution *ag) {
+    fDirectionGenerator = ag;
+    fDirectionGenerator->SetPosDistribution(fPositionGenerator);
+
+}
+
+
+
 void GamSingleParticleSource::SetParticleDefinition(G4ParticleDefinition *def) {
     fParticleDefinition = def;
     fCharge = fParticleDefinition->GetPDGCharge();
@@ -51,8 +59,9 @@ void GamSingleParticleSource::GeneratePrimaryVertex(G4Event *event) {
     // create a new vertex (time must have been set before with SetParticleTime)
     G4PrimaryVertex *vertex = new G4PrimaryVertex(position, particle_time);
 
+
     // direction
-    auto momentum_direction = fDirectionGenerator->GenerateOne();
+    auto momentum_direction = fDirectionGenerator->VGenerateOne();
 
     // energy
     auto energy = fEnergyGenerator->VGenerateOne(fParticleDefinition);

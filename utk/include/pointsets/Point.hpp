@@ -51,7 +51,7 @@ class Point
 {
 public:
 
-    static uint const D = 3;
+    static uint const D = 5;
     typedef double T;
 
 	Point() : m_pos() {}
