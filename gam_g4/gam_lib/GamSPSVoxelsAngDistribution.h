@@ -30,12 +30,7 @@ public:
 
     void SetPosDistributionGamVox(GamSPSVoxelsPosDistribution * pg);
 
-
-    void InitSamplingStuff();
-
-//    void SetSamplerType(std::string sampler_type);
-//
-//    void AddPointsToSamplerSequence(unsigned long long int nb_pts);
+    void SetPointSet(Pointset ptset);
 
     virtual G4ParticleMomentum VGenerateOne();
 
@@ -44,23 +39,10 @@ private:
     G4double MinTheta, MaxTheta, MinPhi, MaxPhi;
 
 
-//    SamplerBase * sampler;
-
-//    ScramblingCranleyPatterson * scramblerCP;
-
-
     GamSPSVoxelsPosDistribution * fPositionGenerator;
-
 
     Pointset generated_pts;
 
-//    std::string points01_filename_;
-//    std::string suffixe;
-//    std::string dir_mom_filename;
-//    std::ofstream m_ostream_dir_mom;
-
-//    int iter;
-//    int * getScientificNot(unsigned long long int N);
 };
 
 

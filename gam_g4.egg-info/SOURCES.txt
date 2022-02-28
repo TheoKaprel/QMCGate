@@ -333,10 +333,14 @@ gam_g4/gam_lib/GamPhaseSpaceActor.cpp
 gam_g4/gam_lib/GamPhaseSpaceActor.h
 gam_g4/gam_lib/GamRunAction.cpp
 gam_g4/gam_lib/GamRunAction.h
+gam_g4/gam_lib/GamSPSAngDistribution.cpp
+gam_g4/gam_lib/GamSPSAngDistribution.h
 gam_g4/gam_lib/GamSPSEneDistribution.cpp
 gam_g4/gam_lib/GamSPSEneDistribution.h
 gam_g4/gam_lib/GamSPSPosDistribution.cpp
 gam_g4/gam_lib/GamSPSPosDistribution.h
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.cpp
+gam_g4/gam_lib/GamSPSVoxelsAngDistribution.h
 gam_g4/gam_lib/GamSPSVoxelsPosDistribution.cpp
 gam_g4/gam_lib/GamSPSVoxelsPosDistribution.h
 gam_g4/gam_lib/GamSignalHandler.h

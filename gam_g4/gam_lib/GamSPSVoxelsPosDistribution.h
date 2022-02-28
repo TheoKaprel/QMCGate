@@ -43,28 +43,11 @@ public:
 
     void SetCumulativeDistributionFunction(VD vz, VD2 vy, VD3 vx);
 
-
-    SamplerBase * sampler;
-
-    ScramblingCranleyPatterson * scramblerCP;
-
     Pointset generated_pts;
 
-    void SetSamplerType(std::string sampler_type);
+    void SetPointSet(Pointset ptset);
 
-    void SetFileName(std::string filename_base);
 
-    void AddPointsToSamplerSequence(unsigned long long int nb_pts);
-
-//    std::string points01_filename;
-//    std::string suffixe;
-
-//    std::string pos_filename;
-//    std::ofstream m_ostream_pos_indexes;
-
-    // Image type is 3D float by default (the pixel data are not used
-    // nor even allocated. Only useful to convert pixel coordinates
-    // to physical coordinates.
     typedef itk::Image<float, 3> ImageType;
 
     // The image is accessible from py side
@@ -77,12 +60,10 @@ public:
 
 protected:
 
-
     VD3 fCDFX;
     VD2 fCDFY;
     VD fCDFZ;
 
-    int * getScientificNot(unsigned long long int N);
 
 };
 

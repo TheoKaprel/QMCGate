@@ -11,6 +11,7 @@
 #include "GamDictHelpers.h"
 
 
+
 GamVoxelsSource::GamVoxelsSource() : GamGenericSource() {
     fVoxelPositionGenerator = new GamSPSVoxelsPosDistribution;
     fVoxelDirectionGenerator = new GamSPSVoxelsAngDistribution;
@@ -33,19 +34,18 @@ void GamVoxelsSource::InitializePosition(py::dict user_info) {
 
     // get and set the sampler type defined by the user
     std::string sampler_type = DictStr(user_info, "sampler");
-    std::vector<std::string> lsamplers = {"WhiteNoise", "Halton"};
+    std::vector <std::string> lsamplers = {"WhiteNoise", "Halton"};
     CheckIsIn(sampler_type, lsamplers);
-    fVoxelPositionGenerator->SetSamplerType(sampler_type);
-
-    // set the filename "base"
-    std::string filename_base = DictStr(user_info, "filename_base");
-    fVoxelPositionGenerator->SetFileName(filename_base);
+    SetSamplerType(sampler_type);
 
 
     // generate the initial number of points = Total activity set + 20 %
     // if the number of samples originally generated is not enough, it will be increased whenever necessary
     unsigned long long int nb_initial_pts = (unsigned long long int) ((DictFloat(user_info, "activity") * 1.e9));
-    fVoxelPositionGenerator->AddPointsToSamplerSequence(nb_initial_pts);
+    // Number of points generated = nb_points (= Activity) + 20 %
+    unsigned long long int nb_pts_to_gen = (unsigned long long int) (1.2 * nb_initial_pts);
+    GenerateSamplesPointset(nb_pts_to_gen);
+    fVoxelPositionGenerator->SetPointSet(generated_pts);
 }
 
 
@@ -58,18 +58,31 @@ void GamVoxelsSource::InitializeDirection(py::dict user_info) {
     std::vector<std::string> l = {"iso"};
     CheckIsIn(ang_type, l);
 
-
     fVoxelDirectionGenerator->SetPosDistributionGamVox(fVoxelPositionGenerator);
-    fVoxelDirectionGenerator->InitSamplingStuff();
 
-//    // get and set the sampler type defined by the user
-//    std::string sampler_type = DictStr(user_info, "sampler");
-//    std::vector<std::string> lsamplers = {"WhiteNoise", "Halton"};
-//    CheckIsIn(sampler_type, lsamplers);
-//    fVoxelDirectionGenerator->SetSamplerType(sampler_type);
-//
-//    // generate the initial number of points = Total activity set
-//    unsigned long long int nb_initial_pts = (unsigned long long int) (DictFloat(user_info, "activity") * 1.e9);
-//    fVoxelDirectionGenerator->AddPointsToSamplerSequence(nb_initial_pts);
+    fVoxelDirectionGenerator->SetPointSet(generated_pts);
 }
 
+
+
+void GamVoxelsSource::SetSamplerType(std::string sampler_type) {
+    std::string WhiteNoise_type = "WhiteNoise";
+    std::string Halton_type = "Halton";
+
+    if (sampler_type == WhiteNoise_type) {
+        sampler = new SamplerWhitenoise;
+    }
+    else if ( sampler_type == Halton_type) {
+        sampler = new SamplerHalton;
+    }
+    scramblerCP = new ScramblingCranleyPatterson;
+
+}
+
+
+void GamVoxelsSource::GenerateSamplesPointset(unsigned long long int nb_points) {
+    sampler->generateSamples(generated_pts, nb_points);
+    Pointset scrambled_pts;
+    scramblerCP->scramble(generated_pts, scrambled_pts);
+    generated_pts = scrambled_pts;
+}

@@ -12,10 +12,20 @@
 #include "GamGenericSource.h"
 #include "GamSingleParticleSource.h"
 #include "GamSPSVoxelsPosDistribution.h"
-
 #include "GamSPSVoxelsAngDistribution.h"
 
+#include <pointsets/Point.hpp>
+#include <pointsets/Pointset.hpp>
+#include <samplers/SamplerBase.hpp>
+#include <samplers/SamplerWhitenoise.hpp>
+#include <samplers/SamplerHalton.hpp>
+#include <scrambling/ScramblingCranleyPatterson.hpp>
+#include <io/fileIO.hpp>
+
+
 namespace py = pybind11;
+
+using namespace utk;
 
 class GamVoxelsSource : public GamGenericSource {
 
@@ -28,6 +38,8 @@ public:
 
     std::string sampler_type;
 
+    void GenerateSamplesPointset(unsigned long long int nb_initial_pts);
+
     GamSPSVoxelsPosDistribution *GetSPSVoxelPosDistribution() { return fVoxelPositionGenerator; }
 
 protected:
@@ -36,6 +48,15 @@ protected:
 
     GamSPSVoxelsPosDistribution * fVoxelPositionGenerator;
     GamSPSVoxelsAngDistribution * fVoxelDirectionGenerator;
+
+    SamplerBase * sampler;
+
+    Pointset generated_pts;
+
+    ScramblingCranleyPatterson * scramblerCP;
+
+    void SetSamplerType(std::string sampler_type);
+
 
 
 };
