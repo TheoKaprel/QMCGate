@@ -34,7 +34,7 @@ void GamVoxelsSource::InitializePosition(py::dict user_info) {
 
     // get and set the sampler type defined by the user
     std::string sampler_type = DictStr(user_info, "sampler");
-    std::vector <std::string> lsamplers = {"WhiteNoise", "Halton"};
+    std::vector <std::string> lsamplers = {"WN", "LD"};
     CheckIsIn(sampler_type, lsamplers);
     SetSamplerType(sampler_type);
 
@@ -66,8 +66,8 @@ void GamVoxelsSource::InitializeDirection(py::dict user_info) {
 
 
 void GamVoxelsSource::SetSamplerType(std::string sampler_type) {
-    std::string WhiteNoise_type = "WhiteNoise";
-    std::string Halton_type = "Halton";
+    std::string WhiteNoise_type = "WN";
+    std::string Halton_type = "LD";
 
     if (sampler_type == WhiteNoise_type) {
         sampler = new SamplerWhitenoise;

@@ -24,6 +24,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "ITKFactoryRegistration"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/include"
+  "/export/home/tkaprelian/Software/RTK/bin/Modules/Remote/RTK"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/utilities/lp_solve/colamd"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/utilities/lp_solve/bfp/bfp_LUSOL/LUSOL"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/utilities/lp_solve/bfp/bfp_LUSOL"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/utilities/lp_solve/bfp"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/utilities/lp_solve/shared"
+  "/export/home/tkaprelian/Software/RTK/src/Modules/Remote/RTK/utilities/lp_solve"
   "/export/home/tkaprelian/Software/RTK/src/Modules/Segmentation/Watersheds/include"
   "/export/home/tkaprelian/Software/RTK/src/Modules/Video/IO/include"
   "/export/home/tkaprelian/Software/RTK/src/Modules/Video/Filtering/include"
@@ -171,6 +179,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/export/home/tkaprelian/Software/RTK/src/Modules/ThirdParty/MetaIO/src/MetaIO/src"
   "/export/home/tkaprelian/Software/RTK/bin/Modules/ThirdParty/MetaIO/src/MetaIO/src"
   "/export/home/tkaprelian/Software/RTK/src/Modules/ThirdParty/ZLIB/src"
+  "/export/home/tkaprelian/Software/RTK/bin/Modules/ThirdParty/ZLIB/src/itkzlib-ng"
   "/export/home/tkaprelian/Software/RTK/bin/Modules/ThirdParty/ZLIB/src"
   "/export/home/tkaprelian/Software/RTK/src/Modules/Core/Mesh/include"
   "/export/home/tkaprelian/Software/RTK/src/Modules/Filtering/ImageCompose/include"

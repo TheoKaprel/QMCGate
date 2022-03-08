@@ -208,7 +208,6 @@ fmt/test/static-export-test/main.cc
 gam_g4/__init__.py
 gam_g4/g4DataSetup.py
 gam_g4/gam_g4.cpp
-gam_g4/gam_g4.cpython-39-x86_64-linux-gnu.so
 gam_g4/qt5Setup.py
 gam_g4.egg-info/PKG-INFO
 gam_g4.egg-info/SOURCES.txt

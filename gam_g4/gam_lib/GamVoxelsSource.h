@@ -57,8 +57,6 @@ protected:
 
     void SetSamplerType(std::string sampler_type);
 
-
-
 };
 
 #endif // GamVoxelsSource_h
